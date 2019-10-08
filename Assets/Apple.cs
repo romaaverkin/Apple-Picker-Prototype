@@ -18,6 +18,11 @@ public class Apple : MonoBehaviour
         if (transform.position.y < bottomY)
         {
             Destroy(gameObject);
+
+            // Получить ссылку на компонент ApplePicker главной камеры Main Camera
+            ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
+            // Вызвать общедоступный метод AppleDestroyed() из apScript
+            apScript.AppleDestroyed();
         }
     }
 }
