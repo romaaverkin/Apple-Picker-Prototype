@@ -50,9 +50,15 @@ public class Basket : MonoBehaviour
             // Преобразовать текст в scoreGT в целое число
             int score = int.Parse(scoreGt.text);
             // Добавить очки за пойманное яблоко
-            score += 100;
+            score += 700;
             // Преобразовать число очков обратно в строку и вывести ее на экран
             scoreGt.text = score.ToString();
+
+            // Запомнить высшее достижение
+            if (score > HighScore.score)
+            {
+                HighScore.score = score;
+            }
         }
     }
 }
