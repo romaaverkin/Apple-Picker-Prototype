@@ -17,6 +17,6 @@ public class HighScore : MonoBehaviour
     void Update()
     {
         Text gt = GetComponent<Text>();
-        gt.text = "High Score" + score;
+        gt.text = "High Score: " + score;
     }
 }
